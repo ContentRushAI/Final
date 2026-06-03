@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cake</title>
+
+<script type="module"
+src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js">
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+font-family:'Poppins',sans-serif;
+}
+
+body{
+margin:0;
+overflow:hidden;
+background:#000;
+}
+
+model-viewer{
+width:100vw;
+height:100vh;
+background:#000;
+}
+
+.top{
+position:absolute;
+top:15px;
+width:100%;
+text-align:center;
+z-index:100;
+}
+
+.brand{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+width:60px;
+height:60px;
+}
+
+.cafe{
+font-size:32px;
+font-weight:700;
+color:#00BFFF;
+}
+
+.product{
+font-size:28px;
+font-weight:700;
+color:white;
+margin-top:8px;
+}
+
+.price{
+font-size:22px;
+font-weight:700;
+color:#00BFFF;
+}
+
+.bottom-btn{
+position:fixed;
+bottom:25px;
+left:50%;
+transform:translateX(-50%);
+z-index:1000;
+}
+
+.bottom-btn button{
+background:#00BFFF;
+color:black;
+border:none;
+border-radius:14px;
+padding:18px 36px;
+font-size:22px;
+font-weight:700;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="top">
+
+<div class="brand">
+<img src="logo.png" class="logo">
+<div class="cafe">ContentRush.AI</div>
+</div>
+
+<div class="product">
+Cake
+</div>
+
+<div class="price">
+₹500
+</div>
+
+</div>
+
+<model-viewer
+src="cake.glb"
+camera-controls
+auto-rotate
+ar
+ar-modes="scene-viewer webxr quick-look"
+shadow-intensity="1"
+environment-image="neutral"> </model-viewer>
+
+<div class="bottom-btn">
+<button onclick="document.querySelector('model-viewer').activateAR()">
+View on Table
+</button>
+</div>
+
+</body>
+</html>
