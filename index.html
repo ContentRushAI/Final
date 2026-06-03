@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ContentRush.AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<script data-goatcounter="https://contentrushai.goatcounter.com/count"
+async src="//gc.zgo.at/count.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+text-align:center;
+padding:20px;
+}
+
+.logo{
+width:90px;
+height:90px;
+object-fit:contain;
+}
+
+.brand{
+font-size:36px;
+font-weight:700;
+color:#00BFFF;
+margin-top:10px;
+}
+
+.status{
+font-size:24px;
+margin-top:30px;
+}
+
+.enter-btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 30px;
+background:#00BFFF;
+color:black;
+text-decoration:none;
+font-weight:700;
+border-radius:12px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo.png" class="logo">
+
+<div class="brand">ContentRush.AI</div>
+
+<div id="content"></div>
+
+</div>
+
+<script>
+
+const subscription = true;
+
+if(subscription){
+
+document.getElementById("content").innerHTML = `
+<div class="status">
+Subscription Active
+</div>
+
+<a href="menu.html" class="enter-btn">
+Enter Menu
+</a>
+`;
+
+}else{
+
+document.getElementById("content").innerHTML = `
+<div class="status">
+This AR Menu Subscription Has Expired
+</div>
+
+<div style="
+margin-top:20px;
+font-size:22px;
+font-weight:700;
+color:#00BFFF;
+">
+Powered by ContentRush.AI
+</div>
+`;
+
+}
+
+</script>
+
+</body>
+</html>
